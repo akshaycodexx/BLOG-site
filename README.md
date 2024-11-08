@@ -44,69 +44,30 @@ The user can delete a post from the list.
 ![Delete Post](./screenshots/delete-post.png)
 
 ---
+  ## How to Run the Project
 
-markdown
-Copy code
-## How to Run the Project
+Follow these steps to set up and run the project locally.
 
-### 1. Clone the Repository
 
-Start by cloning the repository to your local machine. Open a terminal and run the following command:
-
-```bash
+# 1. Clone the Repository
 git clone <your-repository-url>
-2. Navigate to the Project Directory
-After cloning, navigate into the project directory by running:
 
-bash
-Copy code
+# 2. Navigate to the Project Directory
 cd <your-project-folder>
-Replace <your-project-folder> with the name of your project folder.
 
-3. Install Dependencies
-To install all the necessary dependencies, run:
-
-bash
-Copy code
+# 3. Install Dependencies
 npm install
-This will install all the required packages from the package.json file.
 
-4. Set Up Environment Variables (if applicable)
-If your project requires environment variables (for example, API keys or database URLs), you need to create a .env file in the root of your project and add the necessary environment variables.
+# 4. Set Up Environment Variables (if applicable)
+# (Create a .env file and add the variables manually if needed)
+echo "DATABASE_URL=your-database-url" >> .env
+echo "SECRET_KEY=your-secret-key" >> .env
 
-For example:
-
-makefile
-Copy code
-DATABASE_URL=your-database-url
-SECRET_KEY=your-secret-key
-Note: This step is optional and only needed if your project has specific environment variables.
-
-5. Start the Development Server
-To start the project, run the following command:
-
-bash
-Copy code
+# 5. Start the Development Server
 npm start
-This will start your application, and you can access it in your web browser at:
 
-arduino
-Copy code
-http://localhost:8002
-6. Access the Application
-Once the server is up and running, open your browser and go to the following URL to view the application:
+# 6. Access the Application
+# Open your browser and go to http://localhost:8002
 
-arduino
-Copy code
-http://localhost:8002
-7. Stop the Server
-To stop the server at any time, press Ctrl + C in your terminal where the app is running.
-
-Additional Steps (if applicable)
-Running Tests: If your project has unit or integration tests, you can run them with the following command:
-bash
-Copy code
-npm test
-Note: This step is optional and depends on whether tests are set up in your project.
-
-Optional Setup for Production: If you're deploying the project for production, follow these additional steps based on your hosting service (e.g., Heroku, 
+# 7. Stop the Server
+# Press Ctrl + C in your terminal to stop the server.
