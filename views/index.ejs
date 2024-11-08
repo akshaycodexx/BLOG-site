@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link rel="stylesheet" href="/index.css">
+</head>
+<body>
+    <h1>Blog Website</h1>
+    
+    <% posts.forEach(post => { %>
+        <div class="post-container">
+            <div class="post-header">
+                <h2>@<%= post.username %></h2>
+                <h3>ID: <%= post.id %></h3>
+            </div>
+            <p><%= post.content %></p>
+
+            <!-- Button container to align both buttons in the same line -->
+            <div class="button-container">
+                <a href="http://localhost:8002/posts/<%= post.id %>/edit" class="edit-link">Edit</a>
+                <form action="/posts/<%= post.id %>?_method=DELETE" method="post">
+                    <button class="delete-link">Delete</button>
+                </form>
+            </div>
+        </div>
+    <% }) %>
+
+    <a href="/posts/new" class="add-post-link">Add a New Post</a>
+</body>
+</html>
